@@ -20,6 +20,22 @@ public class GEmailSenderController {
 	@Autowired
 	MailService mailService;
 	
+	/**
+	 * 
+	 * @param emailBody
+	 * @return
+	 * 
+	 * Sample mail body request
+	 * 
+	 * {
+    "from": "ramanaaws66@gmail.com",
+    "to": "m.ramanarv@gmail.com",
+    "text": "Sent with Rest API",
+    "subject": "Igonre"
+}
+	 * 
+	 * 
+	 */
 	@PostMapping("/send")
 	public boolean sendEmail(@RequestBody EmailBody emailBody) {
 		
